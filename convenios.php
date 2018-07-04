@@ -132,7 +132,7 @@ include_once('header.php');
 	    	"searching": false,
 	    	"info":     false,
 	        "scrollX": true,
-	        "order": [[ 0, "asc" ]],
+	        "order": [[ 1, "desc" ]],
 			dom: 'Bfrtip',
 	        buttons: [
 	        	{
