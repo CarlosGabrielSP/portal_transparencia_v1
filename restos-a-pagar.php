@@ -19,7 +19,7 @@ include_once('header.php');
 	</div>
  	<div class="ui secondary segment">
 		<div class="painel-form">
-			<form class="ui form" action="empenhos.php" method="GET">
+			<form class="ui form" action="restos-a-pagar.php" method="GET">
 				<input type="hidden" name="tipo" value="<?=$tipo?>">
 				<input type="hidden" name="restosapagar" value="<?=$restosapagar?>">
 				<div class="fields">
@@ -144,13 +144,13 @@ include_once('header.php');
 				<td><?= number_format($linha->getValor(), 2, ',', '.') ?></td>
 			</tr>
 		<?php 
-			} 
+			}
 		?>
 		</tbody>
 	</table>
 </div>
 <?php } else { ?>
-	Nenhum registro encontrado
+	<h3>Nenhum registro encontrado</h3>
 <?php } ?>
 
 <script>
@@ -200,7 +200,7 @@ include_once('header.php');
 	    	"searching": false,
 	    	"info":     false,
 	        "scrollX": true,
-	        "order": [[ 1, "desc" ]],
+	        "order": [[ 1, "desc" ],[0,"desc"]],
 			dom: 'Bfrtip',
 	        buttons: [
 	        	{

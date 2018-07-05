@@ -106,7 +106,7 @@ include_once('header.php');
 	</table>
 </div>
 <?php } else { ?>
-	Nenhum registro encontrado
+	<h3>Nenhum registro encontrado</h3>
 <?php } ?>
 
 <script>

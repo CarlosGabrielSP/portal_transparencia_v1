@@ -73,7 +73,7 @@ date_default_timezone_set('America/Sao_Paulo');
 		<?php } ?>
 		</div>
 		<?php } else { ?>
-			Nada agendado para este dia.
+			<h3>Nada agendado para este dia.</h3>
 		<?php } ?>
 	</div>
 </div>

@@ -15,7 +15,7 @@ include_once('header.php');
 	<div class="ui segment">
 		<h1>
 			Empenho das Despesas <?php if($tipo){
-				echo $tipo == "OR" ? "Orçamentárias" : "Extra-orçamentárias";
+				echo $tipo == "OR" ? "Orçamentárias" : "Extraorçamentárias";
 			} ?>
 		</h1>
 	</div>
@@ -152,7 +152,7 @@ include_once('header.php');
 	</table>
 </div>
 <?php } else { ?>
-	Nenhum registro encontrado
+	<h3>Nenhum registro encontrado</h3>
 <?php } ?>
 
 <script>
@@ -202,7 +202,7 @@ include_once('header.php');
 	    	"searching": false,
 	    	"info":     false,
 	        "scrollX": true,
-	        "order": [[ 1, "desc" ]],
+	        "order": [[ 1, "desc" ],[0,"desc"]],
 			dom: 'Bfrtip',
 	        buttons: [
 	        	{

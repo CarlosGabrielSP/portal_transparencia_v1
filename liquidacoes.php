@@ -13,7 +13,10 @@ include_once('header.php');
 
 <div class="ui segments">
 	<div class="ui segment">
-		<h1>Liquidação das despesas</h1>
+		<h1>Liquidação das Despesas <?php if($tipo){
+				echo $tipo == "OR" ? "Orçamentárias" : "Extraorçamentárias";
+			} ?>
+		</h1>
 	</div>
  	<div class="ui secondary segment">
 		<div class="painel-form">
@@ -77,7 +80,7 @@ include_once('header.php');
 		<thead>
 			<tr>
 				<th>Empenho</th>
-				<th>Tipo</th>
+				<!-- <th>Tipo</th> -->
 				<th>Data da Liquidação</th>
 				<th>Fornecedor</th>
 				<th>Valor</th>
@@ -101,7 +104,7 @@ include_once('header.php');
 						<?= $linha['numeroEmpenho'] ?>
 					</a>					
 				</td>
-				<td class="center aligned"><?= $linha['tipo'] ?></td>
+				<!-- <td class="center aligned"><?= $linha['tipo'] ?></td> -->
 				<td class="center aligned"><?= date('d/m/Y', strtotime($linha['data'])) ?></td>
 				<td><?= $linha['favorecido'] ?></td>
 				<td class="right aligned"><?= number_format($linha['valor'], 2, ',', '.') ?></td>
@@ -113,7 +116,7 @@ include_once('header.php');
 	</table>
 </div>
 <?php } else { ?>
-	Nenhum registro encontrado
+	<h3>Nenhum registro encontrado</h3>
 <?php } ?>
 
 <script>
@@ -163,7 +166,7 @@ include_once('header.php');
 	    	"searching": false,
 	    	"info":     false,
 	        "scrollX": true,
-	        "order": [[ 1, "desc" ]],
+	        "order": [[ 1, "desc" ],[ 0, "desc" ]],
 			dom: 'Bfrtip',
 			"pageLength": 20,
 	        buttons: [

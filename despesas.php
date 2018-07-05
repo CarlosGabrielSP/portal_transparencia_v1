@@ -90,7 +90,7 @@
 					<div class="ui header accordion lista-despesas">
 						<div class="title">
 							<i class="right triangle icon"></i>
-							<a>Despesas Extra-Orçamentárias</a>
+							<a>Despesas Extraorçamentárias</a>
 						</div>
 						<div class="content">
 							<i class="minus tiny icon"></i><a href="empenhos.php?tipo=EX">Empenhos</a><br>
@@ -105,7 +105,7 @@
 					<div class="ui header accordion lista-despesas">
 						<div class="title">
 							<i class="right triangle icon"></i>
-							<a href="restos-a-pagar.php?restosapagar=S">Restos à Pagar</a>
+							<a href="restos-a-pagar.php?restosapagar=S">Restos a Pagar</a>
 						</div>
 					</div>
 				</div>
