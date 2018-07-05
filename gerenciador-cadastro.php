@@ -23,17 +23,17 @@ $elemento = $_POST['elemento'] ?? false;
 if($elemento){
 	switch ($elemento) {
 		case "licitacoes" :
-			$array['exercicio']			= $_POST['exercicio'] ?? '';
-			$array['orgao']				= $_POST['orgao'] ?? '';
-			$array['processo']			= $_POST['processo'] ?? '';
-			$array['modalidade']		= $_POST['modalidade'] ?? '';
-			$array['tipo']				= $_POST['tipo'] ?? '';
-			$array['objeto']			= $_POST['objeto'] ?? '';
-			$array['situacao']			= $_POST['situacao'] ?? '';
-			$array['publicacao']		= $_POST['publicacao'] ?? '';
-			$array['data_publicacao']	= $_POST['data_publicacao'] ?? '';
-			$array['valor']				= $_POST['valor'] ?? '';
-			$array['vencedor']			= $_POST['vencedor'] ?? '';
+			$array['exercicio']			= trim($_POST['exercicio']) ?? '';
+			$array['orgao']				= trim($_POST['orgao']) ?? '';
+			$array['processo']			= trim($_POST['processo']) ?? '';
+			$array['modalidade']		= trim($_POST['modalidade']) ?? '';
+			$array['tipo']				= trim($_POST['tipo']) ?? '';
+			$array['objeto']			= trim($_POST['objeto']) ?? '';
+			$array['situacao']			= trim($_POST['situacao']) ?? '';
+			$array['publicacao']		= trim($_POST['publicacao']) ?? '';
+			$array['data_publicacao']	= trim($_POST['data_publicacao']) ?? '';
+			$array['valor']				= trim($_POST['valor']) ?? '';
+			$array['vencedor']			= trim($_POST['vencedor']) ?? '';
 
 			//Upload do Arquivo =============
 			$prefixo			= $elemento;
@@ -55,10 +55,10 @@ if($elemento){
 			break;
 
 		case "contratos" :
-			$array['exercicio']	= $_POST['exercicio'] ?? '';
-			$array['orgao']		= $_POST['orgao'] ?? '';
-			$array['numero']	= $_POST['numero'] ?? '';
-			$array['ementa']	= $_POST['ementa'] ?? '';
+			$array['exercicio']	= trim($_POST['exercicio']) ?? '';
+			$array['orgao']		= trim($_POST['orgao']) ?? '';
+			$array['numero']	= trim($_POST['numero']) ?? '';
+			$array['ementa']	= trim($_POST['ementa']) ?? '';
 
 			//Upload do Arquivo =============
 			$prefixo			= $elemento;
@@ -80,10 +80,14 @@ if($elemento){
 			break;
 
 		case "convenios" :
-			$array['exercicio']	= $_POST['exercicio'] ?? '';
-			$array['orgao']		= $_POST['orgao'] ?? '';
-			$array['numero']	= $_POST['numero'] ?? '';
-			$array['ementa']	= $_POST['ementa'] ?? '';
+			$array['exercicio']	= trim($_POST['exercicio']) ?? '';
+			$array['orgao']		= trim($_POST['orgao']) ?? '';
+			$array['numero']	= trim($_POST['numero']) ?? '';
+			$array['objeto']	= trim($_POST['objeto']) ?? '';
+			$array['concedente']= trim($_POST['concedente']) ?? '';
+			$array['data']		= trim($_POST['data']) ?? '';
+			$array['vigencia']	= trim($_POST['vigencia']) ?? '';
+			$array['valor']		= trim($_POST['valor']) ?? '';
 
 			//Upload do Arquivo =============
 			$prefixo			= $elemento;
@@ -105,19 +109,19 @@ if($elemento){
 			break;
 
 		case "empenhos" :
-			$array['exercicio']			= $_POST['exercicio'] ?? '';
-			$array['orgao']				= $_POST['orgao'] ?? '';
-			$array['numero']			= $_POST['numero'] ?? '';
-			$array['favorecido']		= $_POST['favorecido'] ?? '';
-			$array['valor']				= $_POST['valor'] ?? '';
-			$array['objeto']			= $_POST['objeto'] ?? '';
-			$array['data']				= $_POST['data'] ?? '';
-			$array['procedimento_lic']	= $_POST['procedimento_lic'] ?? '';
-			$array['unidade_orc']		= $_POST['unidade_orc'] ?? '';
-			$array['funcao']			= $_POST['funcao'] ?? '';
-			$array['subfuncao']			= $_POST['subfuncao'] ?? '';
-			$array['natureza']			= $_POST['natureza'] ?? '';
-			$array['fonte']				= $_POST['fonte'] ?? '';
+			$array['exercicio']			= trim($_POST['exercicio']) ?? '';
+			$array['orgao']				= trim($_POST['orgao']) ?? '';
+			$array['numero']			= trim($_POST['numero']) ?? '';
+			$array['favorecido']		= trim($_POST['favorecido']) ?? '';
+			$array['valor']				= trim($_POST['valor']) ?? '';
+			$array['objeto']			= trim($_POST['objeto']) ?? '';
+			$array['data']				= trim($_POST['data']) ?? '';
+			$array['procedimento_lic']	= trim($_POST['procedimento_lic']) ?? '';
+			$array['unidade_orc']		= trim($_POST['unidade_orc']) ?? '';
+			$array['funcao']			= trim($_POST['funcao']) ?? '';
+			$array['subfuncao']			= trim($_POST['subfuncao']) ?? '';
+			$array['natureza']			= trim($_POST['natureza']) ?? '';
+			$array['fonte']				= trim($_POST['fonte']) ?? '';
 			
 			$empenho = new Empenho();
 			$empenho->setAll($array);
@@ -127,11 +131,11 @@ if($elemento){
 			break;
 
 		case "liquidacoes" :
-			$array['exercicio']	= $_POST['exercicio'] ?? '';
-			$array['orgao']		= $_POST['orgao'] ?? '';
-			$array['valor']		= $_POST['valor'] ?? '';
-			$array['data']		= $_POST['data'] ?? '';
-			$array['empenho'] 	= $_POST['empenho'];
+			$array['exercicio']	= trim($_POST['exercicio']) ?? '';
+			$array['orgao']		= trim($_POST['orgao']) ?? '';
+			$array['valor']		= trim($_POST['valor']) ?? '';
+			$array['data']		= trim($_POST['data']) ?? '';
+			$array['empenho'] 	= trim($_POST['empenho']);
 
 			$liquidacao = new Liquidacao();
 			$liquidacao->setAll($array);
@@ -141,11 +145,11 @@ if($elemento){
 			break;
 
 		case "pagamentos" :
-			$array['exercicio']	= $_POST['exercicio'] ?? '';
-			$array['orgao']		= $_POST['orgao'] ?? '';
-			$array['valor']		= $_POST['valor'] ?? '';
-			$array['data']		= $_POST['data'] ?? '';
-			$array['empenho'] 	= $_POST['empenho'];
+			$array['exercicio']	= trim($_POST['exercicio']) ?? '';
+			$array['orgao']		= trim($_POST['orgao']) ?? '';
+			$array['valor']		= trim($_POST['valor']) ?? '';
+			$array['data']		= trim($_POST['data']) ?? '';
+			$array['empenho'] 	= trim($_POST['empenho']);
 
 			$pagamento = new Pagamento();
 			$pagamento->setAll($array);
@@ -155,12 +159,12 @@ if($elemento){
 			break;
 
 		case "fopag" :
-			$array['exercicio']		= $_POST['exercicio'] ?? '';
-			$array['orgao']			= $_POST['orgao'] ?? '';
-			$array['matricula']		= $_POST['matricula'] ?? '';
-			$array['nome']			= $_POST['nome'] ?? '';
-			$array['cargo']			= $_POST['cargo'] ?? '';
-			$array['remuneracao']	= $_POST['remuneracao'] ?? '';
+			$array['exercicio']		= trim($_POST['exercicio']) ?? '';
+			$array['orgao']			= trim($_POST['orgao']) ?? '';
+			$array['matricula']		= trim($_POST['matricula']) ?? '';
+			$array['nome']			= trim($_POST['nome']) ?? '';
+			$array['cargo']			= trim($_POST['cargo']) ?? '';
+			$array['remuneracao']	= trim($_POST['remuneracao']) ?? '';
 			
 			$empenho = new Empenho();
 			$empenho->setAll($array);
@@ -170,17 +174,17 @@ if($elemento){
 			break;
 
 		case "departamentos" :
-			$array['nome']	= $_POST['nome'] ?? '';
-			$array['cnpj']		= $_POST['cnpj'] ?? '';
-			$array['municipio']	= $_POST['municipio'] ?? '';
-			$array['tipo']	= $_POST['tipo'] ?? '';
-			$array['endereco']	= $_POST['endereco'] ?? '';
-			$array['telefone']	= $_POST['telefone'] ?? '';
-			$array['email']	= $_POST['email'] ?? '';
-			$array['horario']	= $_POST['horario'] ?? '';
-			$array['responsavel']	= $_POST['responsavel'] ?? '';
-			$array['tituloResponsavel']	= $_POST['tituloResponsavel'] ?? '';
-			$array['competencia']	= $_POST['competencia'] ?? '';
+			$array['nome']			= trim($_POST['nome']) ?? '';
+			$array['cnpj']			= trim($_POST['cnpj']) ?? '';
+			$array['municipio']		= trim($_POST['municipio']) ?? '';
+			$array['tipo']			= trim($_POST['tipo']) ?? '';
+			$array['endereco']		= trim($_POST['endereco']) ?? '';
+			$array['telefone']		= trim($_POST['telefone']) ?? '';
+			$array['email']			= trim($_POST['email']) ?? '';
+			$array['horario']		= trim($_POST['horario']) ?? '';
+			$array['responsavel']	= trim($_POST['responsavel']) ?? '';
+			$array['tituloResponsavel']	= trim($_POST['tituloResponsavel']) ?? '';
+			$array['competencia']	= trim($_POST['competencia']) ?? '';
 
 			//Upload do Arquivo =============
 			$nome_arquivo		= $array['nome'].".jpg";
@@ -201,12 +205,12 @@ if($elemento){
 			break;
 
 		case "eventos" :
-			$array['data']	= $_POST['data'] ?? '';
-			$array['hora']		= $_POST['hora'] ?? '';
-			$array['titulo']		= $_POST['titulo'] ?? '';
-			$array['descricao']		= $_POST['descricao'] ?? '';
-			$array['local']		= $_POST['local'] ?? '';
-			$array['tipo'] 	= $_POST['tipo'];
+			$array['data']		= trim($_POST['data']) ?? '';
+			$array['hora']		= trim($_POST['hora']) ?? '';
+			$array['titulo']	= trim($_POST['titulo']) ?? '';
+			$array['descricao']	= trim($_POST['descricao']) ?? '';
+			$array['local']		= trim($_POST['local']) ?? '';
+			$array['tipo'] 		= trim($_POST['tipo']);
 
 			$evento = new Evento();
 			$evento->setAll($array);

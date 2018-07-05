@@ -2,10 +2,10 @@
 require_once('classes/ContratoDAO.php');
 
 if (isset($_GET['numero']) && !empty($_GET['numero'])) {
-	$filtro['numero'] = $_GET['numero'];
+	$filtro['numero'] = trim($_GET['numero']);
 }
 if (isset($_GET['ementa']) && !empty($_GET['ementa'])) {
-	$filtro['ementa'] = $_GET['ementa'];
+	$filtro['ementa'] = trim($_GET['ementa']);
 }
 
 $contratoDAO 		= new ContratoDAO();

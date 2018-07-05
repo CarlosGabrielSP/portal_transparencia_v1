@@ -26,7 +26,7 @@ if ($_FILES['arquivo']) {
     $total_linhas   = $objPHPExcel->setActiveSheetIndex(0)->getHighestRow();
     $total_colunas  = PHPExcel_Cell::columnIndexFromString($colunas);
 
-    $elemento = $_POST['elemento'];
+    $elemento = trim($_POST['elemento']);
 
     if($elemento == 'licitacoes'){
         for($linha=2;$linha<=$total_linhas;$linha++){

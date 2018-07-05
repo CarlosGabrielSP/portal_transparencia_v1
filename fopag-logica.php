@@ -2,28 +2,28 @@
 require_once('classes/SalarioDAO.php');
 
 if (isset($_GET['matricula']) && !empty($_GET['matricula'])) {
-	$filtro['matricula'] = $_GET['matricula'];
+	$filtro['matricula'] = trim($_GET['matricula']);
 }
 if (isset($_GET['nome']) && !empty($_GET['nome'])) {
-	$filtro['nome'] = $_GET['nome'];
+	$filtro['nome'] = trim($_GET['nome']);
 }
 if (isset($_GET['cargo']) && !empty($_GET['cargo'])) {
-	$filtro['cargo'] = $_GET['cargo'];
+	$filtro['cargo'] = trim($_GET['cargo']);
 }
 if (isset($_GET['vinculo']) && !empty($_GET['vinculo'])) {
-	$filtro['vinculo'] = $_GET['vinculo'];
+	$filtro['vinculo'] = trim($_GET['vinculo']);
 }
 if (isset($_GET['bruto']) && !empty($_GET['bruto'])) {
-	$filtro['bruto'] = $_GET['bruto'];
+	$filtro['bruto'] = str_replace(',','.',trim($_GET['bruto']));
 }
 if (isset($_GET['desconto']) && !empty($_GET['desconto'])) {
-	$filtro['desconto'] = $_GET['desconto'];
+	$filtro['desconto'] = str_replace(',','.',trim($_GET['desconto']));
 }
 if (isset($_GET['liquido']) && !empty($_GET['liquido'])) {
-	$filtro['liquido'] = $_GET['liquido'];
+	$filtro['liquido'] = str_replace(',','.',trim($_GET['liquido']));
 }
 if (isset($_GET['orgao']) && !empty($_GET['orgao'])) {
-	$filtro['orgao'] = $_GET['orgao'];
+	$filtro['orgao'] = trim($_GET['orgao']);
 }
 
 $salarioDAO 		= new SalarioDAO();

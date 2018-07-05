@@ -8,21 +8,20 @@ include_once('header.php');
 	<i class="right angle icon divider"></i>
 	<a href="./despesas.php" class="section">Despesas</a>
 	<i class="right angle icon divider"></i>
-	Empenho das despesas
+	Restos a Pagar
 </div>
 
 <div class="ui segments">
 	<div class="ui segment">
 		<h1>
-			Empenho das Despesas <?php if($tipo){
-				echo $tipo == "OR" ? "Orçamentárias" : "Extra-orçamentárias";
-			} ?>
+			Restos a Pagar
 		</h1>
 	</div>
  	<div class="ui secondary segment">
 		<div class="painel-form">
 			<form class="ui form" action="empenhos.php" method="GET">
 				<input type="hidden" name="tipo" value="<?=$tipo?>">
+				<input type="hidden" name="restosapagar" value="<?=$restosapagar?>">
 				<div class="fields">
 					<div class="four wide field">
 						<label>Exercício</label>
@@ -114,7 +113,7 @@ include_once('header.php');
 			<tr>
 				<th>Número</th>
 				<th>Data</th>
-				<th>Tipo</th>
+				<!-- <th>Tipo</th> -->
 				<th>Fornecedor</th>
 				<th>Objeto</th>
 				<th>Procedimento Lic.</th>
@@ -133,7 +132,7 @@ include_once('header.php');
 			<tr>
 				<td class="center aligned"><?= $linha->getNumero() ?></td>
 				<td><?= date('d/m/Y', strtotime($linha->getData())) ?></td>
-				<td class="center aligned"><?= $linha->getTipo() ?></td>
+				<!-- <td class="center aligned"><?= $linha->getTipo() ?></td> -->
 				<td><?= $linha->getFavorecido() ?></td>
 				<td><?= $linha->getObjeto() ?></td>
 				<td><?= $linha->getProcedimento_lic() ?></td>

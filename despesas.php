@@ -105,7 +105,7 @@
 					<div class="ui header accordion lista-despesas">
 						<div class="title">
 							<i class="right triangle icon"></i>
-							<a href="empenhos.php?restosapagar=S">Restos à Pagar</a>
+							<a href="restos-a-pagar.php?restosapagar=S">Restos à Pagar</a>
 						</div>
 					</div>
 				</div>

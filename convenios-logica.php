@@ -14,7 +14,7 @@ if (isset($_GET['data']) && !empty($_GET['data'])) {
 	$filtro['data'] = trim($_GET['data']);
 }
 if (isset($_GET['valor']) && !empty($_GET['valor'])) {
-	$filtro['valor'] = trim($_GET['valor']);
+	$filtro['valor'] = str_replace(',','.',trim($_GET['valor']));
 }
 if (isset($_GET['vigencia']) && !empty($_GET['vigencia'])) {
 	$filtro['vigencia'] = trim($_GET['vigencia']);
