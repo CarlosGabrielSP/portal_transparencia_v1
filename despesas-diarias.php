@@ -68,7 +68,7 @@
 		?>
 			<tr>
 				<td><?= $linha->NEMPG ?></td>
-				<td><?= substr($linha->DATA, 0,10) ?></td>
+				<td><?= date('d/m/Y', strtotime(substr($linha->DATA, 0,10))) ?></td>
 				<td><?= utf8_encode($linha->FAVORECIDO); ?></td>
 				<td><?= utf8_encode($linha->CARGO); ?></td>
 				<td><?= $linha->DEVOLUCAO ?></td>
@@ -104,6 +104,23 @@
 	$('select.dropdown').dropdown();
 
 	$(document).ready(function() {
+		$.fn.dataTable.moment = function ( format, locale ) {
+		    var types = $.fn.dataTable.ext.type;
+		 
+		    // Add type detection
+		    types.detect.unshift( function ( d ) {
+		        return moment( d, format, locale, true ).isValid() ?
+		            'moment-'+format :
+		            null;
+		    } );
+		 
+		    // Add sorting method - use an integer for the sorting
+		    types.order[ 'moment-'+format+'-pre' ] = function ( d ) {
+		        return moment( d, format, locale, true ).unix();
+		    };
+		};
+		$.fn.dataTable.moment( 'DD/MM/YYYY' );
+		
 		var tituloPag = $(".titulo-pag").text();
 	    $('table').DataTable( {
 	    	"language": {

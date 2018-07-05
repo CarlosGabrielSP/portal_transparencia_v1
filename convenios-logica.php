@@ -2,22 +2,22 @@
 require_once('classes/ConvenioDAO.php');
 
 if (isset($_GET['numero']) && !empty($_GET['numero'])) {
-	$filtro['numero'] = $_GET['numero'];
+	$filtro['numero'] = trim($_GET['numero']);
 }
 if (isset($_GET['objeto']) && !empty($_GET['objeto'])) {
-	$filtro['objeto'] = $_GET['objeto'];
+	$filtro['objeto'] = trim($_GET['objeto']);
 }
 if (isset($_GET['concedente']) && !empty($_GET['concedente'])) {
-	$filtro['concedente'] = $_GET['concedente'];
+	$filtro['concedente'] = trim($_GET['concedente']);
 }
 if (isset($_GET['data']) && !empty($_GET['data'])) {
-	$filtro['data'] = $_GET['data'];
+	$filtro['data'] = trim($_GET['data']);
 }
 if (isset($_GET['valor']) && !empty($_GET['valor'])) {
-	$filtro['valor'] = $_GET['valor'];
+	$filtro['valor'] = trim($_GET['valor']);
 }
 if (isset($_GET['vigencia']) && !empty($_GET['vigencia'])) {
-	$filtro['vigencia'] = $_GET['vigencia'];
+	$filtro['vigencia'] = trim($_GET['vigencia']);
 }
 
 $convenioDAO 		= new ConvenioDAO();

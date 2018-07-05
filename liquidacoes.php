@@ -137,6 +137,23 @@ include_once('header.php');
 	$('select.dropdown').dropdown();
 
 	$(document).ready(function() {
+		$.fn.dataTable.moment = function ( format, locale ) {
+		    var types = $.fn.dataTable.ext.type;
+		 
+		    // Add type detection
+		    types.detect.unshift( function ( d ) {
+		        return moment( d, format, locale, true ).isValid() ?
+		            'moment-'+format :
+		            null;
+		    } );
+		 
+		    // Add sorting method - use an integer for the sorting
+		    types.order[ 'moment-'+format+'-pre' ] = function ( d ) {
+		        return moment( d, format, locale, true ).unix();
+		    };
+		};
+		$.fn.dataTable.moment( 'DD/MM/YYYY' );
+
 		var tituloPag = $(".titulo-pag").text();
 	    $('table').DataTable( {
 	    	"language": {
@@ -146,7 +163,7 @@ include_once('header.php');
 	    	"searching": false,
 	    	"info":     false,
 	        "scrollX": true,
-	        "order": [[ 0, "desc" ]],
+	        "order": [[ 1, "desc" ]],
 			dom: 'Bfrtip',
 			"pageLength": 20,
 	        buttons: [

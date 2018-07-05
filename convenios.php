@@ -46,13 +46,29 @@ include_once('header.php');
 				<div class="oculto">
 					<div class="ui divider"></div>
 					<div class="fields">
-						<div class="four wide field">
+						<div class="three wide field">
 							<label>Número</label>
 							<input value="<?= $_GET['numero'] ?? '' ?>" type="text" name="numero">
 						</div>
-						<div class="twelve wide field">
+						<div class="five wide field">
 							<label>Objeto</label>
 							<input value="<?= $_GET['objeto'] ?? '' ?>" type="text" name="objeto">
+						</div>
+						<div class="five wide field">
+							<label>Concedente</label>
+							<input value="<?= $_GET['concedente'] ?? '' ?>" type="text" name="concedente">
+						</div>
+						<div class="three wide field">
+							<label>Data de Celebração</label>
+							<input value="<?= $_GET['data'] ?? '' ?>" type="date" name="data">
+						</div>
+						<div class="three wide field">
+							<label>Vigência</label>
+							<input value="<?= $_GET['vigencia'] ?? '' ?>" type="date" name="vigencia">
+						</div>
+						<div class="three wide field">
+							<label>Valor</label>
+							<input value="<?= $_GET['valor'] ?? '' ?>" type="text" name="valor">
 						</div>
 					</div>
 					<button class="ui circular black button" type="submit">Pesquisar</button>
@@ -84,8 +100,10 @@ include_once('header.php');
 				<td><?= $linha->getObjeto() ?></td>
 				<td><?= $linha->getConcedente() ?></td>
 				<td><?= date('d/m/Y', strtotime($linha->getData())) ?></td>
-				<td><?= date('d/m/Y', strtotime($linha->getVigencia())) ?></td>
-				<td><?= $linha->getValor() ?></td>
+				<td>
+					<?= $linha->getVigencia() > 1 ? date('d/m/Y', strtotime($linha->getVigencia())) : "" ?>
+				</td>
+				<td class="right aligned"><?= number_format($linha->getValor(), 2, ',', '.') ?></td>
 				<td>
 					<?php if(file_exists($linha->getArquivo())): ?>
 						<a href="<?= $linha->getArquivo()?>">Download</a>
@@ -123,6 +141,22 @@ include_once('header.php');
 	$('select.dropdown').dropdown();
 
 	$(document).ready(function() {
+		$.fn.dataTable.moment = function ( format, locale ) {
+		    var types = $.fn.dataTable.ext.type;
+		 
+		    // Add type detection
+		    types.detect.unshift( function ( d ) {
+		        return moment( d, format, locale, true ).isValid() ?
+		            'moment-'+format :
+		            null;
+		    } );
+		 
+		    // Add sorting method - use an integer for the sorting
+		    types.order[ 'moment-'+format+'-pre' ] = function ( d ) {
+		        return moment( d, format, locale, true ).unix();
+		    };
+		};
+		$.fn.dataTable.moment( 'DD/MM/YYYY' );
 		var tituloPag = $(".titulo-pag").text();
 	    $('table').DataTable( {
 	    	"language": {
@@ -132,7 +166,7 @@ include_once('header.php');
 	    	"searching": false,
 	    	"info":     false,
 	        "scrollX": true,
-	        "order": [[ 1, "desc" ]],
+	        "order": [[ 3, "desc" ]],
 			dom: 'Bfrtip',
 	        buttons: [
 	        	{

@@ -84,7 +84,7 @@ class ConvenioDAO {
             }
         }
         $qry .= " ORDER BY {$ordenaPor} {$ordem}";
-        // var_dump($qry);
+        var_dump($qry);
         $resultado = $this->conexao->query($qry);
         while($convenio = $resultado->fetch_object('convenio')){
             $convenios[] = $convenio;

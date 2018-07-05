@@ -16,6 +16,20 @@
 	<script src="js/semantic.min.js"></script>
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/zebra_datepicker/dist/zebra_datepicker.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+	<!-- <script type="text/javascript">
+		function $.fn.dataTable.moment( format, locale ) {
+		    var types = $.fn.dataTable.ext.type;
+		    types.detect.unshift( function ( d ) {
+		        return moment( d, format, locale, true ).isValid() ?
+		            'moment-'+format :
+		            null;
+		    } );
+		    types.order[ 'moment-'+format+'-pre' ] = function ( d ) {
+		        return moment( d, format, locale, true ).unix();
+		    };
+		};
+	</script> -->
 </head>
 <body>
 	<header>

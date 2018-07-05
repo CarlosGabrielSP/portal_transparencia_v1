@@ -119,11 +119,11 @@ if ($_FILES['arquivo']) {
                         $convenio->setConcedente(!empty($celula) ? $celula : "");
                         break;
                     case 3 :
-                        $data = !empty($celula) ?  PHPExcel_Style_NumberFormat::toFormattedString($celula, "YYYY-MM-DD") : "";
+                        $data = !empty($celula) ? PHPExcel_Style_NumberFormat::toFormattedString($celula, "YYYY-MM-DD") : "";
                         $convenio->setData($data);
                         break;
                     case 4 :
-                        $vigencia = !empty($celula) ?  PHPExcel_Style_NumberFormat::toFormattedString($celula, "YYYY-MM-DD") : "";
+                        $vigencia = !empty($celula) ? PHPExcel_Style_NumberFormat::toFormattedString($celula, "YYYY-MM-DD") : "";
                         $convenio->setVigencia($vigencia);
                         break;
                     case 5 :
@@ -336,5 +336,5 @@ if ($_FILES['arquivo']) {
         }
     }
 }
-// header("Location: ".$elemento.".php");
+header("Location: ".$elemento.".php");
 ?>
