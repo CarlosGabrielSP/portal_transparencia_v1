@@ -9,7 +9,7 @@
 
 <h1 class="ui header titulo-pag">Gestão Fiscal</h1>
 
-<div class="ui blue pointing secondary  menu">
+<div class="ui blue pointing secondary menu">
 	<a class="item active" data-tab="rreo"><h3>RREO - Relatório Resumido da Execução Orçamentária</h3></a>
 	<a class="item" data-tab="rgf"><h3>RGF - Relatório de Gestão Fiscal</h3></a>
 </div>
@@ -116,7 +116,6 @@
 
 <script>
 	$('.menu .item').tab();
-
 	$('.ui.accordion').accordion();
 </script>
 

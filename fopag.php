@@ -43,11 +43,11 @@ include_once('header.php');
 		<div class="oculto">
 			<div class="ui divider"></div>
 			<div class="fields">
-				<div class="four wide field">
+				<div class="two wide field">
 					<label>Matrícula</label>
 					<input value="<?= $_GET['matricula'] ?? '' ?>" type="text" name="matricula">
 				</div>
-				<div class="four wide field">
+				<div class="six wide field">
 					<label>Nome</label>
 					<input value="<?= $_GET['nome'] ?? '' ?>" type="text" name="nome">
 				</div>
@@ -59,9 +59,23 @@ include_once('header.php');
 					<label>Vínculo</label>
 					<input value="<?= $_GET['vinculo'] ?? '' ?>" type="text" name="vinculo">
 				</div>
-				<div class="four wide field">
-					<label>Remuneração</label>
-					<input value="<?= $_GET['remuneracao'] ?? '' ?>" type="text" name="remuneracao">
+			</div>
+			<div class="fields">
+				<div class="seven wide field">
+					<label>Órgão</label>
+					<input value="<?= $_GET['orgao'] ?? '' ?>" type="text" name="orgao">
+				</div>
+				<div class="three wide field">
+					<label>Valor bruto</label>
+					<input value="<?= $_GET['bruto'] ?? '' ?>" type="text" name="bruto">
+				</div>
+				<div class="three wide field">
+					<label>Valor Desconto</label>
+					<input value="<?= $_GET['desconto'] ?? '' ?>" type="text" name="desconto">
+				</div>
+				<div class="three wide field">
+					<label>Valor Líquido</label>
+					<input value="<?= $_GET['liquido'] ?? '' ?>" type="text" name="liquido">
 				</div>
 			</div>
 			<button class="ui circular black button" type="submit">Pesquisar</button>
