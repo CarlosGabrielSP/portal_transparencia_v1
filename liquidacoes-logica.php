@@ -34,11 +34,10 @@ $array_liquidacoes	= array();
 if($array_exercicios && $array_orgaos){
 	$exercicio 		= $_GET['exercicio'] ?? end($array_exercicios)['exercicio'];
 	$orgao 			= $_GET['orgao'] ?? 'PREFEITURA MUNICIPAL DE GURUPÁ';
-	$ordenadoPor 	= $_GET['ordenadoPor'] ?? 'numero';
+	$ordenadoPor 	= $_GET['ordenadoPor'] ?? 'data';
 	$ordem 			= $_GET['ordem'] ?? 'DESC';
 
-	$filtro['exercicio'] 	= $exercicio;
-	$filtro['orgao'] 		= $orgao;
+	$filtro['exercicio'] = $exercicio;
 
 	$array_liquidacoes = $liquidacaoDAO->getLiquidacoes($filtro,$ordenadoPor,$ordem);
 }

@@ -81,7 +81,7 @@ class LiquidacaoDAO {
         }
 
         $qry .= " ORDER BY {$ordenaPor} {$ordem}";
-
+        // var_dump($qry);
         $resultado = $this->conexao->query($qry);
         while($row = $resultado->fetch_assoc()){
             $liquidacao['id']               = $row['id'];

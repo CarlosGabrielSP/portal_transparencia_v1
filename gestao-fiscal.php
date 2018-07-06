@@ -15,7 +15,7 @@
 </div>
 <div class="ui tab message active" data-tab="rreo">
 	<div class="ui accordion">
-		<!-- <div class="title active">
+		<div class="title active">
 			<i class="dropdown icon"></i>
 			2018
 		</div>
@@ -23,16 +23,21 @@
 			<div class="ui list">
 				<div class="item">
 					<div class="content">
-						<a href="#">1º Bimestre</a>
+						<a href="arquivo/rreo/2018/RREO-2018-PRIMEIRO-BIMESTRE.pdf">1º Bimestre</a>
+					</div>
+				</div>
+				<div class="item">
+					<div class="content">
+						<a href="arquivo/rreo/2018/RREO-2018-SEGUNDO-BIMESTRE.pdf">2º Bimestre</a>
 					</div>
 				</div>
 			</div>
-		</div> -->
-		<div class="title active">
+		</div>
+		<div class="title">
 			<i class="dropdown icon"></i>
 			2017
 		</div>
-		<div class="content active">
+		<div class="content">
 			<div class="ui list">
 				<div class="item">
 					<div class="content">
@@ -70,7 +75,7 @@
 </div>
 <div class="ui tab message" data-tab="rgf">
 	<div class="ui accordion">
-		<!-- <div class="title active">
+		<div class="title active">
 			<i class="dropdown icon"></i>
 			2018
 		</div>
@@ -78,16 +83,16 @@
 			<div class="ui list">
 				<div class="item">
 					<div class="content">
-						<a href="#">1º Quadrimestre</a>
+						<a href="arquivo/rgf/2018/RGF-2018-PRIMEIRO-QUADRIMESTRE.pdf">1º Quadrimestre</a>
 					</div>
 				</div>
 			</div>
-		</div> -->
-		<div class="title active">
+		</div>
+		<div class="title">
 			<i class="dropdown icon"></i>
 			2017
 		</div>
-		<div class="content active">
+		<div class="content">
 			<div class="ui list">
 				<div class="item">
 					<div class="content">

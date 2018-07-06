@@ -21,6 +21,7 @@ include_once('header.php');
  	<div class="ui secondary segment">
 		<div class="painel-form">
 			<form class="ui form" action="pagamentos.php" method="GET">
+				<input type="hidden" name="tipo" value="<?=$tipo?>">
 				<div class="fields">
 					<div class="four wide field">
 						<label>Exercício</label>
