@@ -18,7 +18,7 @@
 		</div>
 		<div class="column">
 			<div class="ui orange segment bloco">
-				<a href="receitas.php" class="item_transp">
+				<a href="receitas" class="item_transp">
 					<h2 class="ui header">
 						<i class="line chart icon"></i>
 						<div class="content">
@@ -31,7 +31,7 @@
 		</div>
 		<div class="column">
 			<div class="ui olive segment bloco">
-				<a href="despesas-com-pessoal.php" class="item_transp">
+				<a href="despesas-com-pessoal" class="item_transp">
 					<h2 class="ui header">
 						<i class="users icon"></i>
 						<div class="content">
@@ -46,7 +46,7 @@
 	<div class="three column row">
 		<div class="column">
 			<div class="ui yellow segment bloco">
-				<a href="orcamento.php" class="item_transp">
+				<a href="orcamento" class="item_transp">
 					<h2 class="ui header">
 						<i class="book icon"></i>
 						<div class="content">
@@ -59,7 +59,7 @@
 		</div>
 		<div class="column">
 			<div class="ui green segment bloco">
-				<a href="gestao-fiscal.php" class="item_transp">
+				<a href="gestao-fiscal" class="item_transp">
 					<h2 class="ui header">
 						<i class="file alternate outline icon"></i>
 						<div class="content">
@@ -72,7 +72,7 @@
 		</div>
 		<div class="column">
 			<div class="ui brown segment bloco">
-				<a href="licitacoes.php" class="item_transp">
+				<a href="licitacoes" class="item_transp">
 					<h2 class="ui header">
 						<i class="legal icon"></i>
 						<div class="content">
@@ -87,7 +87,7 @@
 	<div class="three column row">
 		<div class="column">
 			<div class="ui teal segment bloco">
-				<a href="contratos-e-convenios.php" class="item_transp">
+				<a href="contratos-e-convenios" class="item_transp">
 					<h2 class="ui header">
 						<i class="handshake outline icon"></i>
 						<div class="content">
@@ -100,7 +100,7 @@
 		</div>
 		<div class="column">
 			<div class="ui blue segment bloco">
-				<a href="acoes-programas.php" class="item_transp">
+				<a href="acoes-programas" class="item_transp">
 					<h2 class="ui header">
 						<i class="suitcase icon"></i>
 						<div class="content">
@@ -113,7 +113,7 @@
 		</div>
 		<div class="column">
 			<div class="ui violet segment bloco">
-				<a href="projetos-obras.php" class="item_transp">
+				<a href="projetos-obras" class="item_transp">
 					<h2 class="ui header">
 						<i class="road icon"></i>
 						<div class="content">

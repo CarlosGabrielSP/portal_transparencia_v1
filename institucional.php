@@ -12,19 +12,11 @@
 	</div>
  	<div class="ui secondary segment">
 		<div class="ui divided list">
-			<!-- <div class="item">
-				<div class="content">
-					<h3 class="header">
-						<i class="right triangle icon"></i>
-						<a href="#">Estrutura Organizacional</a>
-					</h3>
-				</div>
-			</div> -->
 			<div class="item">
 				<div class="content">
 					<h3 class="header">
 						<i class="right triangle icon"></i>
-						<a href="departamentos.php">Secretarias e Departamentos</a>
+						<a href="departamentos">Secretarias e Departamentos</a>
 					</h3>
 				</div>
 			</div>
@@ -32,7 +24,7 @@
 				<div class="content">
 					<h3 class="header">
 						<i class="right triangle icon"></i>
-						<a href="agenda-do-prefeito.php">Agenda do Prefeito</a>
+						<a href="agenda-do-prefeito">Agenda do Prefeito</a>
 					</h3>
 				</div>
 			</div>

@@ -13,7 +13,7 @@
 		<div class="content">
 			<h3 class="header">
 				<i class="right triangle icon"></i>
-				<a href="contratos.php">Contratos</a>
+				<a href="contratos">Contratos</a>
 			</h3>
 		</div>
 	</div>
@@ -21,7 +21,7 @@
 		<div class="content">
 			<h3 class="header">
 				<i class="right triangle icon"></i>
-				<a href="convenios.php">Convênios</a>
+				<a href="convenios">Convênios</a>
 			</h3>
 		</div>
 	</div>

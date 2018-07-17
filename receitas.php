@@ -16,7 +16,7 @@
 				<div class="content">
 					<h3 class="header">
 						<i class="right triangle icon"></i>
-						<a href="receitas-gerais.php">Receitas Gerais</a>
+						<a href="receitas-gerais">Receitas Gerais</a>
 					</h3>
 				</div>
 			</div>

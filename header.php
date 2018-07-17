@@ -17,19 +17,6 @@
 	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/zebra_datepicker/dist/zebra_datepicker.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-	<!-- <script type="text/javascript">
-		function $.fn.dataTable.moment( format, locale ) {
-		    var types = $.fn.dataTable.ext.type;
-		    types.detect.unshift( function ( d ) {
-		        return moment( d, format, locale, true ).isValid() ?
-		            'moment-'+format :
-		            null;
-		    } );
-		    types.order[ 'moment-'+format+'-pre' ] = function ( d ) {
-		        return moment( d, format, locale, true ).unix();
-		    };
-		};
-	</script> -->
 </head>
 <body>
 	<header>
@@ -60,7 +47,7 @@
 		    		<i class="home icon"></i>
 					&nbsp;&nbsp;Início
 				</a>
-				<a class="item" href="institucional.php">
+				<a class="item" href="institucional">
 		    		<i class="university icon"></i>
 					&nbsp;&nbsp;Institucional
 				</a>
@@ -72,7 +59,7 @@
 		    		<i class="info circle icon"></i>
 					&nbsp;&nbsp;E-SIC
 				</a>
-				<a class="item" href="perguntas-frequentes.php">
+				<a class="item" href="perguntas-frequentes">
 		    		<i class="help circle outline icon"></i>
 					&nbsp;&nbsp;Perguntas frequentes
 				</a>

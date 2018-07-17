@@ -78,9 +78,9 @@
 							<a>Despesas Orçamentárias</a>
 						</div>
 						<div class="content">
-							<i class="minus tiny icon"></i><a href="empenhos.php?tipo=OR">Empenhos</a><br>
-							<i class="minus tiny icon"></i><a href="liquidacoes.php?tipo=OR">Liquidações</a><br>
-							<i class="minus tiny icon"></i><a href="pagamentos.php?tipo=OR">Pagamentos</a><br>
+							<i class="minus tiny icon"></i><a href="empenhos?tipo=OR">Empenhos</a><br>
+							<i class="minus tiny icon"></i><a href="liquidacoes?tipo=OR">Liquidações</a><br>
+							<i class="minus tiny icon"></i><a href="pagamentos?tipo=OR">Pagamentos</a><br>
 						</div>
 					</div>
 				</div>
@@ -93,9 +93,9 @@
 							<a>Despesas Extraorçamentárias</a>
 						</div>
 						<div class="content">
-							<i class="minus tiny icon"></i><a href="empenhos.php?tipo=EX">Empenhos</a><br>
-							<i class="minus tiny icon"></i><a href="liquidacoes.php?tipo=EX">Liquidações</a><br>
-							<i class="minus tiny icon"></i><a href="pagamentos.php?tipo=EX">Pagamentos</a><br>
+							<i class="minus tiny icon"></i><a href="empenhos?tipo=EX">Empenhos</a><br>
+							<i class="minus tiny icon"></i><a href="liquidacoes?tipo=EX">Liquidações</a><br>
+							<i class="minus tiny icon"></i><a href="pagamentos?tipo=EX">Pagamentos</a><br>
 						</div>
 					</div>
 				</div>
@@ -105,7 +105,7 @@
 					<div class="ui header accordion lista-despesas">
 						<div class="title">
 							<i class="right triangle icon"></i>
-							<a href="restos-a-pagar.php?restosapagar=S">Restos a Pagar</a>
+							<a href="restos-a-pagar?restosapagar=S">Restos a Pagar</a>
 						</div>
 					</div>
 				</div>
@@ -115,7 +115,7 @@
 					<div class="ui header accordion lista-despesas">
 						<div class="title">
 							<i class="right triangle icon"></i>
-							<a href="despesas-diarias.php">Diárias</a>
+							<a href="despesas-diarias">Diárias</a>
 						</div>
 					</div>
 				</div>

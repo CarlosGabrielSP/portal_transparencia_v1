@@ -16,7 +16,7 @@
 				<div class="content">
 					<h3 class="header">
 						<i class="right triangle icon"></i>
-						<a href="fopag.php">Folha de Pagamento</a>
+						<a href="fopag">Folha de Pagamento</a>
 					</h3>
 				</div>
 			</div>
