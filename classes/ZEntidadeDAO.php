@@ -1,7 +1,7 @@
 <?php 
 require_once('ZConexao.php');
 
-class EntidadeDAO {
+class ZEntidadeDAO {
 	private $conexaoFirebird;
 
     public function __construct($exercicio){

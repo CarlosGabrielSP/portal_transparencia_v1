@@ -1,11 +1,11 @@
 <?php 
 	require_once('classes/ZReceitaDAO.php');
-	require_once('classes/EntidadeDAO.php');
+	require_once('classes/ZEntidadeDAO.php');
 
 	$exercicio = $_GET['exercicio'] ?? "2018";
 	$codEntidade = $_GET['codEntidade'] ?? "2";
 
-	$entidadeDAO = new EntidadeDAO($exercicio);
+	$entidadeDAO = new ZEntidadeDAO($exercicio);
 	$todasEntidades = $entidadeDAO->getTodasEntidades();
 
 	$receitaDAO = new ZReceitaDAO($exercicio);

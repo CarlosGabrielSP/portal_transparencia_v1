@@ -66,4 +66,8 @@
 			</div>
 		</div>
 	</header>
+	<div id="preloader">
+		<img class="ui centered small image" src="img/loading3.gif">
+	</div>	
 	<main class="ui container">
+			

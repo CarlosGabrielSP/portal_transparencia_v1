@@ -13,6 +13,16 @@ footer{
 	height: 100px;
 }
 
+#preloader{
+	background-color: white;
+	position: absolute;
+	height: 100%!important;
+	width: 100%!important;
+	z-index: 9999;
+	margin: 0!important;
+	padding: 100px 0 0 0;
+}
+
 main{
 	padding: 20px 0 0 0;
 }
