@@ -115,7 +115,6 @@ include_once('header.php');
 			<tr>
 				<th>Número</th>
 				<th>Data</th>
-				<!-- <th>Tipo</th> -->
 				<th>Fornecedor</th>
 				<th>Objeto</th>
 				<th>Procedimento Lic.</th>
@@ -134,7 +133,6 @@ include_once('header.php');
 			<tr>
 				<td class="center aligned"><?= $linha->getNumero() ?></td>
 				<td><?= date('d/m/Y', strtotime($linha->getData())) ?></td>
-				<!-- <td class="center aligned"><?= $linha->getTipo() ?></td> -->
 				<td><?= $linha->getFavorecido() ?></td>
 				<td><?= $linha->getObjeto() ?></td>
 				<td><?= $linha->getProcedimento_lic() ?></td>

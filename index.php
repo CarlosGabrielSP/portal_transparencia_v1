@@ -104,8 +104,8 @@
 					<h2 class="ui header">
 						<i class="suitcase icon"></i>
 						<div class="content">
-							Ações e Programas
-							<div class="sub header">Relatórios de acompanamento dos Programas do Governo</div>
+							Programas e Ações
+							<div class="sub header">Relatórios de acompanhamento dos Programas do Governo</div>
 						</div>
 					</h2>
 				</a>

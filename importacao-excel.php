@@ -292,47 +292,47 @@ if ($_FILES['arquivo']) {
             }
         }
     }else if($elemento == 'fopag'){
-        for($linha=2;$linha<=$total_linhas;$linha++){
-            set_time_limit(30);
-            $salario = new Salario();
-            $salarioDao = new SalarioDao();
-            for($coluna=0;$coluna<=$total_colunas-1;$coluna++){
-                $celula = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow($coluna,$linha)->getValue();
-                $celula = trim(mysqli_real_escape_string($salarioDao->getConexao(),$celula));
-                switch($coluna){
-                    case 0 :
-                        $salario->setMatricula(!empty($celula) ? $celula : "");
-                        break;
-                    case 1 :
-                        $salario->setNome(!empty($celula) ? $celula : "");
-                        break;
-                    case 2 :
-                        $salario->setCargo(!empty($celula) ? $celula : "");
-                        break;
-                    case 3 :
-                        $salario->setVinculo(!empty($celula) ? $celula : "");
-                        break;
-                    case 4 :
-                        $salario->setBruto(!empty($celula) ? $celula : 0);
-                        break;
-                    case 5 :
-                        $salario->setDesconto(!empty($celula) ? $celula : 0);
-                        break;
-                    case 6 :
-                        $salario->setLiquido(!empty($celula) ? $celula : 0);
-                        break;
-                    case 7 :
-                        $salario->setOrgao(!empty($celula) ? $celula : "");
-                        break;
-                    case 8 :
-                        $salario->setMes(!empty($celula) ? $celula : "");
-                        break;
-                    case 9 :
-                        $salario->setExercicio(!empty($celula) ? $celula : "");
-                        break;
+        $mes = trim($_POST['mes']);
+        $ano = trim($_POST['ano']);
+        if($mes && $ano){
+            for($linha=2;$linha<=$total_linhas;$linha++){
+                set_time_limit(30);
+                $salario = new Salario();
+                $salarioDao = new SalarioDao();
+                for($coluna=0;$coluna<=$total_colunas-1;$coluna++){
+                    $celula = $objPHPExcel->getActiveSheet()->getCellByColumnAndRow($coluna,$linha)->getValue();
+                    $celula = trim(mysqli_real_escape_string($salarioDao->getConexao(),$celula));
+                    switch($coluna){
+                        case 0 :
+                            $salario->setMatricula(!empty($celula) ? $celula : "");
+                            break;
+                        case 1 :
+                            $salario->setNome(!empty($celula) ? $celula : "");
+                            break;
+                        case 2 :
+                            $salario->setCargo(!empty($celula) ? $celula : "");
+                            break;
+                        case 3 :
+                            $salario->setVinculo(!empty($celula) ? $celula : "");
+                            break;
+                        case 4 :
+                            $salario->setBruto(!empty($celula) ? $celula : 0);
+                            break;
+                        case 5 :
+                            $salario->setDesconto(!empty($celula) ? $celula : 0);
+                            break;
+                        case 6 :
+                            $salario->setLiquido(!empty($celula) ? $celula : 0);
+                            break;
+                        case 7 :
+                            $salario->setOrgao(!empty($celula) ? $celula : "");
+                            break;
+                    }
                 }
+                $salario->setMes($mes);
+                $salario->setExercicio($ano);
+                $salarioDao->setSalario($salario);
             }
-            $salarioDao->setSalario($salario);
         }
     }
 }

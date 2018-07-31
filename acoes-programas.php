@@ -3,12 +3,12 @@
 <div class="ui breadcrumb">
 	<a href="./" class="section">Início</a>
 	<i class="right angle icon divider"></i>
-	Ações e Programas
+	Programas e Ações
 </div>
 
 <div class="ui segments">
 	<div class="ui segment">
-		<h1>Ações e Programas</h1>
+		<h1>Programas e Ações</h1>
 	</div>
  	<div class="ui secondary segment">
 		<div class="ui attached segment">

@@ -67,7 +67,7 @@
 		</div>
 	</header>
 	<div id="preloader">
-		<img class="ui centered small image" src="img/loading3.gif">
+		<img class="ui centered tiny image" src="img/loading4.gif">
 	</div>	
-	<main class="ui container">
+	<main id="principal" style="display: none" class="ui container">
 			

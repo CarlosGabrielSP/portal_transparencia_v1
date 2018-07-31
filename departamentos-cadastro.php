@@ -17,39 +17,39 @@
 					<input type="text" name="cnpj">
 				</div>
 				<div class="four wide field">
-					<label>municipio</label>
+					<label>Município</label>
 					<input type="text" name="municipio" required="required">
 				</div>
 				<div class="four wide field">
-					<label>tipo</label>
+					<label>Tipo</label>
 					<input type="text" name="tipo" required="required">
 				</div>
 			</div>
 			<div class="fields">
 				<div class="four wide field">
-					<label>endereco</label>
+					<label>Endereço</label>
 					<input type="text" name="endereco" required="required">
 				</div>
 				<div class="four wide field">
-					<label>telefone</label>
+					<label>Telefone</label>
 					<input type="text" name="telefone" required="required">
 				</div>
 				<div class="four wide field">
-					<label>email</label>
+					<label>Email</label>
 					<input type="text" name="email" required="required">
 				</div>
 				<div class="four wide field">
-					<label>horario</label>
+					<label>Horário de Atendimento</label>
 					<input type="text" name="horario" required="required">
 				</div>
 			</div>
 			<div class="fields">
 				<div class="four wide field">
-					<label>responsavel</label>
+					<label>Responsável</label>
 					<input type="text" name="responsavel" required="required">
 				</div>
 				<div class="four wide field">
-					<label>tituloResponsavel</label>
+					<label>Título do Responsável</label>
 					<input type="text" name="tituloResponsavel" required="required">
 				</div>
 				

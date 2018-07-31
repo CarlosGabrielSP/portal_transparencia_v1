@@ -6,7 +6,7 @@ include_once('header.php');
 <div class="ui breadcrumb">
 	<a href="./" class="section">Início</a>
 	<i class="right angle icon divider"></i>
-	<a href="#" class="section">Despesas com Pessoal</a>
+	<a href="./despesas-com-pessoal" class="section">Despesas com Pessoal</a>
 	<i class="right angle icon divider"></i>
 	Folha de Pagamento
 </div>

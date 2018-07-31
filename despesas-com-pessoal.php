@@ -3,7 +3,7 @@
 <div class="ui breadcrumb">
 	<a href="./" class="section">Início</a>
 	<i class="right angle icon divider"></i>
-	Pessoal
+	Despesas com Pessoal
 </div>
 
 <div class="ui segments">

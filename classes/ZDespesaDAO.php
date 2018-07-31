@@ -69,9 +69,9 @@ class ZDespesaDAO
             INNER JOIN DESDIS FI ON FI.FICHA = D.FICHA
             LEFT JOIN TABELEMENTO TE ON TE.ELEMENTO = D.ELEMENTO
             WHERE FI.EMPRESA = {$codEntidade} 
-                AND D.ELEMENTO in ('14', '33')
+                AND D.ELEMENTO in ('14')
                 AND (D.DATAE >= '{$this->conexaoFirebird->getExercicio()}-01-01'
-                AND D.DATAE <= '{$this->conexaoFirebird->getExercicio()}-01-31')
+                AND D.DATAE <= '{$this->conexaoFirebird->getExercicio()}-12-31')
             ORDER by F.NOME, D.DATAE";
 
         $scpi = $this->conexaoFirebird->getConexaoSCPI();
