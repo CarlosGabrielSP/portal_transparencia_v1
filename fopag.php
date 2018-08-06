@@ -172,21 +172,21 @@ include_once('header.php');
 	        "scrollX": true,
 	        "order": [[ 1, "asc" ]],
 	        "pageLength": 20,
-			dom: 'Bfrtip',
-	        buttons: [
-	        	{
-		            extend: 'pdfHtml5',
-	                orientation: 'landscape',
-	                pageSize: 'LEGAL',
-	                text: 'Download <i class="pdf file red icon"></i>',
-	                title: tituloPag
-		        },
-	            {
-		            extend: 'print',
-		            text: 'Imprimir <i class="print blue icon"></i>',
-		            title: tituloPag
-		        },
-	        ]
+			// dom: 'Bfrtip',
+	  //       buttons: [
+	  //       	{
+		 //            extend: 'pdfHtml5',
+	  //               orientation: 'landscape',
+	  //               pageSize: 'LEGAL',
+	  //               text: 'Download <i class="pdf file red icon"></i>',
+	  //               title: tituloPag
+		 //        },
+	  //           {
+		 //            extend: 'print',
+		 //            text: 'Imprimir <i class="print blue icon"></i>',
+		 //            title: tituloPag
+		 //        },
+	  //       ]
 	    } );
 	} );
 </script>

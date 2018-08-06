@@ -93,6 +93,7 @@ class SalarioDAO {
             }
         }
         $qry .= " ORDER BY {$ordenaPor} {$ordem}";
+        // var_dump($qry);
         $resultado = $this->conexao->query($qry);
         while($salario = $resultado->fetch_object('salario')){
             $salarios[] = $salario;

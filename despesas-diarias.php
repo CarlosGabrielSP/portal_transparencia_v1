@@ -29,7 +29,6 @@
 			<div class="four wide field">
 				<label>Exercício</label>
 				<select class="ui fluid dropdown" name="exercicio" onchange="envia()">
-					<!-- <option value="2017" <?= $exercicio=='2017' ? 'selected' : '' ?>>2017</option> -->
 					<option value="2018" <?= $exercicio=='2018' ? 'selected' : '' ?>>2018</option>
 				</select>
 			</div>
