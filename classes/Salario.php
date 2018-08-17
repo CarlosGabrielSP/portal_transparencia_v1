@@ -10,6 +10,7 @@ class Salario
     private $bruto;
     private $desconto;
     private $liquido;
+    private $lotacao;
     private $orgao;
     private $mes;
     private $exercicio;
@@ -45,6 +46,9 @@ class Salario
     public function getLiquido()
     {
         return $this->liquido;
+    }
+    public function getLotacao(){
+        return $this->lotacao;
     }
     public function getOrgao()
     {
@@ -99,6 +103,11 @@ class Salario
         $this->liquido = $liquido;
         return $this;
     }
+    public function setLotacao($lotacao)
+    {
+        $this->lotacao = $lotacao;
+        return $this;
+    }
     public function setOrgao($orgao)
     {
         $this->orgao = $orgao;
@@ -141,6 +150,9 @@ class Salario
                     break;
                 case "liquido":
                     $this->liquido = ($campo ?? "");
+                    break;
+                case "lotacao" :
+                    $this->lotacao = ($campo ?? "");
                     break;
                 case "orgao" :
                     $this->orgao = ($campo ?? "");

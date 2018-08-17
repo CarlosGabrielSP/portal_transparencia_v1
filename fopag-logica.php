@@ -22,6 +22,9 @@ if (isset($_GET['desconto']) && !empty($_GET['desconto'])) {
 if (isset($_GET['liquido']) && !empty($_GET['liquido'])) {
 	$filtro['liquido'] = str_replace(',','.',trim($_GET['liquido']));
 }
+if (isset($_GET['lotacao']) && !empty($_GET['lotacao'])) {
+	$filtro['lotacao'] = str_replace(',','.',trim($_GET['lotacao']));
+}
 if (isset($_GET['orgao']) && !empty($_GET['orgao'])) {
 	$filtro['orgao'] = trim($_GET['orgao']);
 }
@@ -41,6 +44,7 @@ if($array_meses && $array_exercicios){
 	$filtro['exercicio']	= $exercicio;
 
 	$array_salarios = $salarioDAO->getSalarios($filtro,$ordenadoPor,$ordem);
+	//var_dump($array_salarios);
 }
 $nome_meses[1] = 'Janeiro';
 $nome_meses[2] = 'Fevereiro';

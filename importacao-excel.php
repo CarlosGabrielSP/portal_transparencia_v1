@@ -325,6 +325,9 @@ if ($_FILES['arquivo']) {
                             $salario->setLiquido(!empty($celula) ? $celula : 0);
                             break;
                         case 7 :
+                            $salario->setLotacao(!empty($celula) ? $celula : "");
+                            break;
+                        case 8 :
                             $salario->setOrgao(!empty($celula) ? $celula : "");
                             break;
                     }

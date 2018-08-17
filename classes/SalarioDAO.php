@@ -21,7 +21,8 @@ class SalarioDAO {
         $vinculo        = $this->conexao->real_escape_string($salario->getVinculo());
         $bruto          = $this->conexao->real_escape_string($salario->getBruto());
         $desconto       = $this->conexao->real_escape_string($salario->getDesconto());
-        $liquido        = $this->conexao->real_escape_string($salario->getliquido());
+        $liquido        = $this->conexao->real_escape_string($salario->getLiquido());
+        $lotacao        = $this->conexao->real_escape_string($salario->getLotacao());
         $orgao          = $this->conexao->real_escape_string($salario->getOrgao());
         $mes            = $this->conexao->real_escape_string($salario->getMes());
         $exercicio      = $this->conexao->real_escape_string($salario->getExercicio());
@@ -34,6 +35,7 @@ class SalarioDAO {
                         bruto,
                         desconto,
                         liquido,
+                        lotacao,
                         orgao,
                         mes,
                         exercicio)
@@ -45,6 +47,7 @@ class SalarioDAO {
                         {$bruto},
                         {$desconto},
                         {$liquido},
+                        '{$lotacao}',
                         '{$orgao}',
                         {$mes},
                         {$exercicio})";
@@ -80,6 +83,9 @@ class SalarioDAO {
                     break;
                 case 'liquido':
                     $qry .= " AND liquido = {$pesquisa}";
+                    break;
+                case 'lotacao':
+                    $qry .= " AND lotacao LIKE '%{$pesquisa}%'";
                     break;
                 case 'orgao':
                     $qry .= " AND orgao = '{$pesquisa}'";

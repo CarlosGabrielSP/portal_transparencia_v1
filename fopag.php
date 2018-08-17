@@ -61,19 +61,23 @@ include_once('header.php');
 				</div>
 			</div>
 			<div class="fields">
-				<div class="seven wide field">
+				<div class="five wide field">
 					<label>Órgão</label>
 					<input value="<?= $_GET['orgao'] ?? '' ?>" type="text" name="orgao">
 				</div>
-				<div class="three wide field">
+				<div class="five wide field">
+					<label>Lotação</label>
+					<input value="<?= $_GET['lotacao'] ?? '' ?>" type="text" name="lotacao">
+				</div>
+				<div class="two wide field">
 					<label>Valor bruto</label>
 					<input value="<?= $_GET['bruto'] ?? '' ?>" type="text" name="bruto">
 				</div>
-				<div class="three wide field">
+				<div class="two wide field">
 					<label>Valor Desconto</label>
 					<input value="<?= $_GET['desconto'] ?? '' ?>" type="text" name="desconto">
 				</div>
-				<div class="three wide field">
+				<div class="two wide field">
 					<label>Valor Líquido</label>
 					<input value="<?= $_GET['liquido'] ?? '' ?>" type="text" name="liquido">
 				</div>
@@ -91,7 +95,8 @@ include_once('header.php');
 				<th>Nome</th>
 				<th>Cargo</th>
 				<th>Vínculo</th>
-				<th>Órgão</th>
+				<!-- <th>Órgão</th> -->
+				<th>Lotação</th>
 				<th>Bruto (R$)</th>
 				<th>Desconto (R$)</th>
 				<th>Líquido (R$)</th>
@@ -108,7 +113,8 @@ include_once('header.php');
 				<td><?= $linha->getNome() ?></td>
 				<td><?= $linha->getCargo() ?></td>
 				<td><?= $linha->getVinculo() ?></td>
-				<td><?= $linha->getOrgao() ?></td>
+				<!-- <td><?= $linha->getOrgao() ?></td> -->
+				<td><?= $linha->getLotacao() ?></td>
 				<td class="right aligned"><?= number_format($linha->getBruto(), 2, ',', '.') ?></td>
 				<td class="right aligned"><?= number_format($linha->getDesconto(), 2, ',', '.') ?></td>
 				<td class="right aligned"><?= number_format($linha->getLiquido(), 2, ',', '.') ?></td>
@@ -172,21 +178,21 @@ include_once('header.php');
 	        "scrollX": true,
 	        "order": [[ 1, "asc" ]],
 	        "pageLength": 20,
-			// dom: 'Bfrtip',
-	  //       buttons: [
-	  //       	{
-		 //            extend: 'pdfHtml5',
-	  //               orientation: 'landscape',
-	  //               pageSize: 'LEGAL',
-	  //               text: 'Download <i class="pdf file red icon"></i>',
-	  //               title: tituloPag
-		 //        },
-	  //           {
-		 //            extend: 'print',
-		 //            text: 'Imprimir <i class="print blue icon"></i>',
-		 //            title: tituloPag
-		 //        },
-	  //       ]
+			/*dom: 'Bfrtip',
+	        buttons: [
+	        	{
+		            extend: 'pdfHtml5',
+	                orientation: 'landscape',
+	                pageSize: 'LEGAL',
+	                text: 'Download <i class="pdf file red icon"></i>',
+	                title: tituloPag
+		        },
+	            {
+		            extend: 'print',
+		            text: 'Imprimir <i class="print blue icon"></i>',
+		            title: tituloPag
+		        },
+	        ]*/
 	    } );
 	} );
 </script>
