@@ -1,6 +1,6 @@
 <?php
-require_once('classes/Conexao.php');
-require_once('classes/Licitacao.php');
+require_once('../cnx/Conexao.php');
+require_once('Licitacao.php');
 
 class LicitacaoDAO {
 	private $conexao;

@@ -1,5 +1,5 @@
 <?php
-require_once('ZConexao.php');
+require_once('../cnx/ZConexao.php');
 
 class ZReceitaDAO
 {

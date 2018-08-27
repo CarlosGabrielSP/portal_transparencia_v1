@@ -1,7 +1,7 @@
 <?php
-require_once('classes/Conexao.php');
-require_once('classes/Liquidacao.php');
-require_once('classes/EmpenhoDAO.php');
+require_once('../cnx/Conexao.php');
+require_once('Liquidacao.php');
+require_once('EmpenhoDAO.php');
 
 class LiquidacaoDAO {
 	private $conexao;

@@ -1,5 +1,5 @@
 <?php 
-require_once('classes/Empenho.php');
+require_once('Empenho.php');
 
 class Liquidacao
 {
