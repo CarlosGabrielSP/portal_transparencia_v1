@@ -10,7 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/semantic.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 	<link rel="stylesheet" type="text/css" href="../DataTables/datatables.min.css"/>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zebra_datepicker/dist/css/default/zebra_datepicker.min.css">
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zebra_datepicker/dist/css/default/zebra_datepicker.min.css"> -->
 
 	<script src="../js/jquery-3.2.1.min.js"></script>
 	<script src="../js/semantic.min.js"></script>
@@ -54,6 +54,10 @@
 				<a class="item" href="#">
 		    		<i class="book icon"></i>
 					&nbsp;&nbsp;Legislação
+				</a>
+				<a class="item" target="_blank" href="https://rhonline.fenix.com.br/gurupa">
+		    		<i class="id card icon"></i>
+					&nbsp;&nbsp;Contracheque Online
 				</a>
 				<a class="item" href="http://www.gurupa.pa.gov.br/ordem-servico/bcid/39/?e-sic---pedido-de-informacoes.html">
 		    		<i class="info circle icon"></i>
