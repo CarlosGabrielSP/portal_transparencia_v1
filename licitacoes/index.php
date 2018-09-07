@@ -112,7 +112,7 @@ include_once('../include/header.php');
 		?>
 			<tr>
 				<td><?= $linha->getProcesso() ?></td>
-				<td><?= date('d/m/Y', strtotime($linha->getData_publicacao())) ?></td>
+				<td><?= $dataPublicacao = date('d/m/Y', strtotime($linha->getData_publicacao())) ?></td>
 				<td><?= $linha->getModalidade() ?></td>
 				<td><?= $linha->getTipo() ?></td>
 				<td><?= $linha->getObjeto() ?></td>
@@ -121,9 +121,11 @@ include_once('../include/header.php');
 				<td class="right aligned"><?= number_format($linha->getValor(), 2, ',', '.') ?></td>
 				<td><?= $linha->getVencedor() ?></td>
 				<td>
-					<?php if(file_exists($linha->getEdital())): ?>
-						<a href="<?= $linha->getEdital()?>">Download</a>
-					<?php endif ?>
+				<?php
+					$caminhoEdital = "../arquivo/licitacoes/".date('Y',strtotime($dataPublicacao))."/".$linha->getModalidade()." ".str_replace('/','-',$linha->getProcesso().".pdf");
+					if(file_exists($caminhoEdital)): ?>
+						<a class="ui icon" target="_blank" href="<?= $caminhoEdital ?>"><i class="file pdf outline icon red"></i></a>
+				<?php endif ?>
 				</td>
 			</tr>
 		<?php 
@@ -196,8 +198,8 @@ include_once('../include/header.php');
 	            {
 		            extend: 'print',
 		            text: 'Imprimir <i class="print blue icon"></i>',
-		            title: tituloPag
-		        },
+		            title: tituloPag,
+		        }
 	        ]
 	    } );
 	} );

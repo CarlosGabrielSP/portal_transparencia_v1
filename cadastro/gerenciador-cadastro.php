@@ -36,16 +36,16 @@ if($elemento){
 			$array['vencedor']			= trim($_POST['vencedor']) ?? '';
 
 			//Upload do Arquivo =============
-			$prefixo			= $elemento;
-			$nome_arquivo		= $prefixo.preg_replace("/[^0-9]/","",$array['processo']).".pdf";
-			$diretorio			= "arquivo/".$elemento."/".$array['exercicio']."/";
+			$prefixo			= $array['modalidade'];
+			$nome_arquivo		= $prefixo.preg_replace("/[^0-9]/","-",$array['processo']).".pdf";
+			$diretorio			= "../arquivo/".$elemento."/".$array['exercicio']."/";
 			if(!is_dir($diretorio)){
 				mkdir($diretorio);
 			}
 			$caminho_completo	= $diretorio.$nome_arquivo;
 			$local_temp			= $_FILES['edital']['tmp_name'];
 			$uploadArquivo		= move_uploaded_file($local_temp, $caminho_completo);
-			$array['edital']	= $uploadArquivo ? $caminho_completo : "";
+			//$array['edital']	= $uploadArquivo ? $caminho_completo : "";
 			
 			$licitacao = new Licitacao();
 			$licitacao->setAll($array);
@@ -63,14 +63,14 @@ if($elemento){
 			//Upload do Arquivo =============
 			$prefixo			= $elemento;
 			$nome_arquivo		= $prefixo.preg_replace("/[^0-9]/","",$array['numero']).".pdf";
-			$diretorio			= "arquivo/".$elemento."/".$array['exercicio']."/";
+			$diretorio			= "../arquivo/".$elemento."/".$array['exercicio']."/";
 			if(!is_dir($diretorio)){
 				mkdir($diretorio);
 			}
 			$caminho_completo	= $diretorio.$nome_arquivo;
 			$local_temp			= $_FILES['arquivo']['tmp_name'];
 			$uploadArquivo		= move_uploaded_file($local_temp, $caminho_completo);
-			$array['arquivo']	= $uploadArquivo ? $caminho_completo : "";
+			//$array['arquivo']	= $uploadArquivo ? $caminho_completo : "";
 			// var_dump($uploadArquivo);
 			$contrato = new Contrato();
 			$contrato->setAll($array);
@@ -92,14 +92,14 @@ if($elemento){
 			//Upload do Arquivo =============
 			$prefixo			= $elemento;
 			$nome_arquivo		= $prefixo.preg_replace("/[^0-9]/","",$array['numero']).".pdf";
-			$diretorio			= "arquivo/".$elemento."/".$array['exercicio']."/";
+			$diretorio			= "../arquivo/".$elemento."/".$array['exercicio']."/";
 			if(!is_dir($diretorio)){
 				mkdir($diretorio);
 			}
 			$caminho_completo	= $diretorio.$nome_arquivo;
 			$local_temp			= $_FILES['arquivo']['tmp_name'];
 			$uploadArquivo		= move_uploaded_file($local_temp, $caminho_completo);
-			$array['arquivo']	= $uploadArquivo ? $caminho_completo : "";
+			//$array['arquivo']	= $uploadArquivo ? $caminho_completo : "";
 			// var_dump($caminho_completo);
 			$convenio = new Convenio();
 			$convenio->setAll($array);
@@ -188,7 +188,7 @@ if($elemento){
 
 			//Upload do Arquivo =============
 			$nome_arquivo		= $array['nome'].".jpg";
-			$diretorio			= "arquivo/".$elemento;
+			$diretorio			= "../arquivo/".$elemento;
 			if(!is_dir($diretorio)){
 				mkdir($diretorio);
 			}
