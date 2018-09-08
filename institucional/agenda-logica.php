@@ -1,5 +1,5 @@
 <?php 
-require_once('../classes/eventoDAO.php');
+require_once('../classes/eventoDAO.class.php');
 
 $campoDia = $_POST['campoDia'] ?? date('d');
 $campoMes = $_POST['campoMes'] ?? date('m');

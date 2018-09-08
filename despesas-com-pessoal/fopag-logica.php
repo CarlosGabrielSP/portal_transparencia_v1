@@ -1,5 +1,5 @@
 <?php 
-require_once('../classes/SalarioDAO.php');
+require_once('../classes/SalarioDAO.class.php');
 
 if (isset($_GET['matricula']) && !empty($_GET['matricula'])) {
 	$filtro['matricula'] = trim($_GET['matricula']);

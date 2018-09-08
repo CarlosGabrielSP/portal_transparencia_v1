@@ -1,5 +1,5 @@
 <?php 
-require_once('../classes/LiquidacaoDAO.php');
+require_once('../classes/LiquidacaoDAO.class.php');
 
 if (isset($_GET['numeroEmpenho']) && !empty($_GET['numeroEmpenho'])) {
 	$filtro['numeroEmpenho'] = trim($_GET['numeroEmpenho']);

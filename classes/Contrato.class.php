@@ -17,9 +17,29 @@ class Contrato
     {
         return $this->numero;
     }
-    public function getEmenta()
+    public function getProcLicitatorio()
     {
-        return $this->ementa;
+        return $this->procLicitatorio;
+    }
+    public function getObjeto()
+    {
+        return $this->objeto;
+    }
+    public function getValor()
+    {
+        return $this->valor;
+    }
+    public function getContratado()
+    {
+        return $this->contratado;
+    }
+    public function getData()
+    {
+        return $this->data;
+    }
+    public function getVigencia()
+    {
+        return $this->vigencia;
     }
     public function getArquivo()
     {
@@ -44,9 +64,34 @@ class Contrato
         $this->numero = $numero;
         return $this;
     }
-    public function setEmenta($ementa)
+    public function setProcLicitatorio($procLicitatorio)
     {
-        $this->ementa = $ementa;
+        $this->procLicitatorio = $procLicitatorio;
+        return $this;
+    }
+    public function setObjeto($objeto)
+    {
+        $this->objeto = $objeto;
+        return $this;
+    }
+    public function setValor($valor)
+    {
+        $this->valor = $valor;
+        return $this;
+    }
+    public function setContratado($contratado)
+    {
+        $this->contratado = $contratado;
+        return $this;
+    }
+    public function setData($data)
+    {
+        $this->data = $data;
+        return $this;
+    }
+    public function setVigencia($vigencia)
+    {
+        $this->vigencia = $vigencia;
         return $this;
     }
     public function setArquivo($arquivo)
@@ -74,8 +119,23 @@ class Contrato
                 case "numero" :
                     $this->numero = ($campo ?? "");
                     break;
-                case "ementa" :
-                    $this->ementa = ($campo ?? "");
+                case "procLicitatorio" :
+                    $this->procLicitatorio = ($campo ?? "");
+                    break;
+                case "objeto" :
+                    $this->objeto = ($campo ?? "");
+                    break;
+                case "valor" :
+                    $this->valor = ($campo ?? "");
+                    break;
+                case "contratado" :
+                    $this->contratado = ($campo ?? "");
+                    break;
+                case "data" :
+                    $this->data = ($campo ?? "");
+                    break;
+                case "vigencia" :
+                    $this->vigencia = ($campo ?? "");
                     break;
                 case "arquivo":
                     $this->arquivo = ($campo ?? "");

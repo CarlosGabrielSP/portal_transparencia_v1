@@ -1,6 +1,6 @@
 <?php 
-	require_once('../classes/ZReceitaDAO.php');
-	require_once('../classes/ZEntidadeDAO.php');
+	require_once('../classes/ZReceitaDAO.class.php');
+	require_once('../classes/ZEntidadeDAO.class.php');
 
 	$exercicio = $_GET['exercicio'] ?? "2018";
 	$codEntidade = $_GET['codEntidade'] ?? "2";

@@ -1,18 +1,18 @@
 <?php
-require_once('../classes/Licitacao.php');
-require_once('../classes/LicitacaoDAO.php');
-require_once('../classes/Contrato.php');
-require_once('../classes/ContratoDAO.php');
-require_once('../classes/Convenio.php');
-require_once('../classes/ConvenioDAO.php');
-require_once('../classes/Empenho.php');
-require_once('../classes/EmpenhoDAO.php');
-require_once('../classes/Liquidacao.php');
-require_once('../classes/LiquidacaoDAO.php');
-require_once('../classes/Pagamento.php');
-require_once('../classes/PagamentoDAO.php');
-require_once('../classes/Salario.php');
-require_once('../classes/SalarioDAO.php');
+require_once('../classes/Licitacao.class.php');
+require_once('../classes/LicitacaoDAO.class.php');
+require_once('../classes/Contrato.class.php');
+require_once('../classes/ContratoDAO.class.php');
+require_once('../classes/Convenio.class.php');
+require_once('../classes/ConvenioDAO.class.php');
+require_once('../classes/Empenho.class.php');
+require_once('../classes/EmpenhoDAO.class.php');
+require_once('../classes/Liquidacao.class.php');
+require_once('../classes/LiquidacaoDAO.class.php');
+require_once('../classes/Pagamento.class.php');
+require_once('../classes/PagamentoDAO.class.php');
+require_once('../classes/Salario.class.php');
+require_once('../classes/SalarioDAO.class.php');
 require_once('../classes/PHPExcel.php');
 
 if ($_FILES['arquivo']) {

@@ -1,5 +1,5 @@
 <?php 
-require_once('../classes/ConvenioDAO.php');
+require_once('../classes/ConvenioDAO.class.php');
 
 if (isset($_GET['numero']) && !empty($_GET['numero'])) {
 	$filtro['numero'] = trim($_GET['numero']);

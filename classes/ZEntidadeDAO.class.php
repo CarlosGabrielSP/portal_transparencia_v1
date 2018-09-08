@@ -1,5 +1,5 @@
 <?php 
-require_once('../cnx/ZConexao.php');
+require_once('../cnx/ZConexao.class.php');
 
 class ZEntidadeDAO {
 	private $conexaoFirebird;

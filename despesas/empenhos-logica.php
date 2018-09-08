@@ -1,5 +1,5 @@
 <?php 
-require_once('../classes/EmpenhoDAO.php');
+require_once('../classes/EmpenhoDAO.class.php');
 $restosapagar = "N";
 if (isset($_GET['restosapagar']) && !empty($_GET['restosapagar']) && $_GET['restosapagar']=="S") {
 	$restosapagar = trim($_GET['restosapagar']);
