@@ -1,15 +1,31 @@
 <?php include_once('../include/header.php'); ?>
 
-<br><br><br>
-
-<div class="ui three column grid">
-	<div class="column"></div>
-	<div class="column">
-		<h2 class="ui center aligned icon header">
-			<i class="cog loading orange icon"></i>
-			Conteúdo não cadastrado.
-		</h2>
-	</div>
-	<div class="column"></div>
+<div class="ui breadcrumb">
+	<a href="../index" class="section">Início</a>
+	<i class="right angle icon divider"></i>
+	Projetos e Obras
 </div>
+
+<div class="ui segments">
+	<div class="ui segment">
+		<h1>Projetos e Obras</h1>
+	</div>
+	<div class="ui secondary segment">
+		<div class="ui divided list">
+			<div class="item">
+				<div class="content">
+					<h3 class="header">
+						<i class="right triangle icon"></i>
+						<a href="obras-federais">Obras Federais</a>
+					</h3>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="voltar">
+	<a href="../index/"><< Voltar</a>
+</div>
+
 <?php include_once('../include/footer.php'); ?>

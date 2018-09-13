@@ -88,17 +88,37 @@ if ($_FILES['arquivo']) {
                         $contrato->setNumero(!empty($celula) ? $celula : "");
                         break;
                     case 1 :
-                        $contrato->setEmenta(!empty($celula) ? $celula : "");
+                        $contrato->setProcLicitatorio(!empty($celula) ? $celula : "");
                         break;
                     case 2 :
-                        $contrato->setOrgao(!empty($celula) ? $celula : "");
+                        $contrato->setObjeto(!empty($celula) ? $celula : "");
                         break;
                     case 3 :
+                        $contrato->setValor(!empty($celula) ? $celula : 0);
+                        break;
+                    case 4 :
+                        $contrato->setContratado(!empty($celula) ? $celula : "");
+                        break;
+                    case 5 :
+                        $data = !empty($celula) ? PHPExcel_Style_NumberFormat::toFormattedString($celula, "YYYY-MM-DD") : "";
+                        $contrato->setData($data);
+                        break;
+                    case 6 :
+                        $contrato->setVigencia(!empty($celula) ? $celula : "");
+                        break;
+                    case 7 :
+                        $contrato->setOrgao(!empty($celula) ? $celula : "");
+                        break;
+                    case 8 :
                         $contrato->setExercicio(!empty($celula) ? $celula : "");
                         break;
                 }
             }
-            $contratoDao->setContrato($contrato);
+            // var_dump($contrato);
+            if ($contratoDao->setContrato($contrato)) {
+                echo $contrato->setNumero."<br>";
+            }
+            
         }
     }else if($elemento == 'convenios'){
         for($linha=2;$linha<=$total_linhas;$linha++){
@@ -339,5 +359,4 @@ if ($_FILES['arquivo']) {
         }
     }
 }
-header("Location: ../index");
-?>
+//header("Location: ../index");

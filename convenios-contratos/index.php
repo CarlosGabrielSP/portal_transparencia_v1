@@ -6,26 +6,32 @@
 	Contratos e Convênios
 </div>
 
-<h1 class="ui header">Contratos e Convênios</h1>
-
-<div class="ui divided list">
-	<div class="item">
-		<div class="content">
-			<h3 class="header">
-				<i class="right triangle icon"></i>
-				<a href="contratos">Contratos</a>
-			</h3>
-		</div>
+<div class="ui segments">
+	<div class="ui segment">
+		<h1>Contratos e Convênios</h1>
 	</div>
-	<div class="item">
-		<div class="content">
-			<h3 class="header">
-				<i class="right triangle icon"></i>
-				<a href="convenios">Convênios</a>
-			</h3>
+ 	<div class="ui secondary segment">
+		<div class="ui divided list">
+			<div class="item">
+				<div class="content">
+					<h3 class="header">
+						<i class="right triangle icon"></i>
+						<a href="contratos">Contratos</a>
+					</h3>
+				</div>
+			</div>
+			<div class="item">
+				<div class="content">
+					<h3 class="header">
+						<i class="right triangle icon"></i>
+						<a href="convenios">Convênios</a>
+					</h3>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
+
 <div class="voltar">
 	<a href="../index"><< Voltar</a>
 </div>

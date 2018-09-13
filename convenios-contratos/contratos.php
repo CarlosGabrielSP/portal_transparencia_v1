@@ -32,6 +32,7 @@ include_once('../include/header.php');
 					<div class="twelve wide field">
 						<label>Órgão</label>
 						<select class="ui fluid dropdown" name="orgao" onchange="envia()">
+							<option value="">Todos</option>
 						<?php foreach ($array_orgaos as $o) : ?>
 							<option value="<?= ($o['orgao']) ?>" <?= $orgao==($o['orgao']) ? 'selected' : '' ?>>
 								<?= ($o['orgao']) ?>
@@ -67,8 +68,12 @@ include_once('../include/header.php');
 		<thead>
 			<tr>
 				<th>Número</th>
-				<th>Ementa</th>
-				<th>Contrato</th>
+				<th>Proc. Licitatório</th>
+				<th>Data</th>
+				<th>Objeto</th>
+				<th>Contratado</th>
+				<th>Vigência</th>
+				<th>Valor</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -77,12 +82,17 @@ include_once('../include/header.php');
 		?>
 			<tr>
 				<td><?= $linha->getNumero() ?></td>
-				<td><?= $linha->getEmenta() ?></td>
-				<td>
+				<td><?= $linha->getProcLicitatorio() ?></td>
+				<td><?= date('d/m/Y', strtotime($linha->getData())) ?></td>
+				<td><?= $linha->getObjeto() ?></td>
+				<td><?= $linha->getContratado() ?></td>
+				<td><?= $linha->getVigencia() ?></td>
+				<td><?= number_format($linha->getValor(), 2, ',', '.') ?></td>
+				<!-- <td>
 					<?php if(file_exists($linha->getArquivo())): ?>
 						<a href="<?= $linha->getArquivo()?>">Download</a>
 					<?php endif ?>
-				</td>
+				</td> -->
 			</tr>
 		<?php 
 			} 
@@ -141,7 +151,7 @@ include_once('../include/header.php');
 	    	"searching": false,
 	    	"info":     false,
 	        "scrollX": true,
-	        "order": [[ 1, "desc" ]],
+	        "order": [[ 2, "desc" ]],
 			dom: 'Bfrtip',
 	        buttons: [
 	        	{

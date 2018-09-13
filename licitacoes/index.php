@@ -122,7 +122,7 @@ include_once('../include/header.php');
 				<td><?= $linha->getVencedor() ?></td>
 				<td>
 				<?php
-					$caminhoEdital = "../arquivo/licitacoes/".date('Y',strtotime($dataPublicacao))."/".$linha->getModalidade()." ".str_replace('/','-',$linha->getProcesso().".pdf");
+					$caminhoEdital = "../arquivo/licitacoes/".$linha->getExercicio()."/".$linha->getModalidade()." ".str_replace('/','-',$linha->getProcesso().".pdf");
 					if(file_exists($caminhoEdital)): ?>
 						<a class="ui icon" target="_blank" href="<?= $caminhoEdital ?>"><i class="file pdf outline icon red"></i></a>
 				<?php endif ?>

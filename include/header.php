@@ -51,7 +51,7 @@
 		    		<i class="university icon"></i>
 					&nbsp;&nbsp;Institucional
 				</a>
-				<a class="item" href="#">
+				<a class="item" href="../legislacao">
 		    		<i class="book icon"></i>
 					&nbsp;&nbsp;Legislação
 				</a>

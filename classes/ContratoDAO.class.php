@@ -16,23 +16,39 @@ class ContratoDAO {
 
     function setContrato(Contrato $contrato){
         $numero = $this->conexao->real_escape_string($contrato->getNumero());
-        $ementa = $this->conexao->real_escape_string($contrato->getEmenta());
+        $procLicitatorio = $this->conexao->real_escape_string($contrato->getProcLicitatorio());
+        $objeto = $this->conexao->real_escape_string($contrato->getObjeto());
+        $valor = $this->conexao->real_escape_string($contrato->getValor());
+        $contratado = $this->conexao->real_escape_string($contrato->getContratado());
+        $data = $this->conexao->real_escape_string($contrato->getData());
+        $vigencia = $this->conexao->real_escape_string($contrato->getVigencia());
         $arquivo = $this->conexao->real_escape_string($contrato->getArquivo());
         $orgao = $this->conexao->real_escape_string($contrato->getOrgao());
         $exercicio = $this->conexao->real_escape_string($contrato->getExercicio());
 
         $qry = "INSERT INTO contrato
                         (numero,
-                        ementa,
+                        procLicitatorio,
+                        objeto,
+                        valor,
+                        contratado,
+                        data,
+                        vigencia,
                         arquivo,
                         orgao,
                         exercicio)
                 VALUES
                         ('{$numero}',
-                        '{$ementa}',
+                        '{$procLicitatorio}',
+                        '{$objeto}',
+                        {$valor},
+                        '{$contratado}',
+                        '{$data}',
+                        '{$vigencia}',
                         '{$arquivo}',
                         '{$orgao}',
                         {$exercicio})";
+        var_dump($qry);
         return $this->conexao->query($qry);
         // return mysqli_query($this->conexao,$qry);
     }
@@ -49,8 +65,23 @@ class ContratoDAO {
                 case 'numero':
                     $qry .= " AND numero LIKE '%{$pesquisa}%'";
                     break;
-                case 'ementa':
-                    $qry .= " AND ementa LIKE '%{$pesquisa}%'";
+                case 'procLicitatorio':
+                    $qry .= " AND procLicitatorio LIKE '%{$pesquisa}%'";
+                    break;
+                case 'objeto':
+                    $qry .= " AND objeto LIKE '%{$pesquisa}%'";
+                    break;
+                case 'valor':
+                    $qry .= " AND valor = '{$pesquisa}'";
+                    break;
+                case 'contratado':
+                    $qry .= " AND contratado LIKE '%{$pesquisa}%'";
+                    break;
+                case 'data':
+                    $qry .= " AND data = '{$pesquisa}'";
+                    break;
+                case 'vigencia':
+                    $qry .= " AND vigencia LIKE '%{$pesquisa}%'";
                     break;
                 case 'orgao':
                     $qry .= " AND orgao = '{$pesquisa}'";

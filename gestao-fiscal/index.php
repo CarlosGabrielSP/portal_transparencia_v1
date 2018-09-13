@@ -1,6 +1,5 @@
 <?php include_once('../include/header.php'); ?>
 
-
 <div class="ui breadcrumb">
 	<a href="../index/" class="section">Início</a>
 	<i class="right angle icon divider"></i>
@@ -12,6 +11,7 @@
 <div class="ui blue pointing secondary menu">
 	<a class="item active" data-tab="rreo"><h3>RREO - Relatório Resumido da Execução Orçamentária</h3></a>
 	<a class="item" data-tab="rgf"><h3>RGF - Relatório de Gestão Fiscal</h3></a>
+	<a class="item" data-tab="rci"><h3>Relatório Anual do Controle Interno</h3></a>
 </div>
 <div class="ui tab message active" data-tab="rreo">
 	<div class="ui accordion">
@@ -111,6 +111,18 @@
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+<div class="ui tab message" data-tab="rci">
+	<div class="ui big middle aligned selection list">
+		<a href="../arquivo/rci/2017/RCI 2017.pdf" class="item">
+			<div class="content">
+				<div class="header">Relatório Anual do Controle Interno - Exercício 2017</div>
+				<!-- <div class="description">
+					Relatório Anual do Controle Interno - Exercício 2017
+				</div> -->
+			</div>
+		</a>
 	</div>
 </div>
 
