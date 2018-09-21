@@ -3,7 +3,7 @@ $param = "localhost/3050:C:\Fiorilli\SCPI_8\CIDADES\GURUPA_PM\ARQ2018\SCPI2018.F
 
 $conn = ibase_connect($param,"FSCSCPI8","scpi");
 
-$filtro = array('exrcicio'=>2018,'tipo'=>'OR');
+$filtro = array('exercicio'=>2018,'tipo'=>'OR');
 
 $query_select = 
     "SELECT D.NEMPG AS EMPENHO, F.NOME AS FAVORECIDO, D.VADEM AS VALOR, D.PRODU AS HISTORICO, D.TPEM AS TIPO_EMP, D.DATAE AS DATA_EMPENHO, D.LICIT AS PROCED_LIC,

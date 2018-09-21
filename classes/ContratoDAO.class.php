@@ -48,7 +48,6 @@ class ContratoDAO {
                         '{$arquivo}',
                         '{$orgao}',
                         {$exercicio})";
-        var_dump($qry);
         return $this->conexao->query($qry);
         // return mysqli_query($this->conexao,$qry);
     }

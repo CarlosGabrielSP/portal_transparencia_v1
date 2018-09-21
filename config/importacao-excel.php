@@ -359,4 +359,4 @@ if ($_FILES['arquivo']) {
         }
     }
 }
-//header("Location: ../index");
+header("Location: ../index");
