@@ -25,7 +25,7 @@ $elemento = trim($_POST['elemento']) ?? false;
 if($elemento){
 	
 	$array = array_map('trim',$_POST);
-	$array['valor'] = str_replace(',', '.', $array['valor']);
+	$array['valor'] = str_replace(',','.', $array['valor']);
 
 	switch ($elemento) {
 		case "licitacoes" :

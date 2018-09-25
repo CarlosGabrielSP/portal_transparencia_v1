@@ -125,6 +125,9 @@ include_once('../include/header.php');
 					$caminhoEdital = "../arquivo/licitacoes/".$linha->getExercicio()."/".$linha->getModalidade()." ".str_replace('/','-',$linha->getProcesso().".pdf");
 					if(file_exists($caminhoEdital)): ?>
 						<a class="ui icon" target="_blank" href="<?= $caminhoEdital ?>"><i class="file pdf outline icon red"></i></a>
+						<a class="ui icon" target="_blank" href="<?= $caminhoEdital ?>">
+							Download
+						</a>
 				<?php endif ?>
 				</td>
 			</tr>
