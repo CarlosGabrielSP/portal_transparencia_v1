@@ -12,13 +12,13 @@ if(count($arrayResultado)){
                     <th>Empenho</th>
                     <th>Data</th>
                     <th>Favorecido</th>
-                    <!-- <th>Objeto</th>
-                    <th>Procedimento Licitatório</th> -->
+                    <th>Objeto</th>
+                    <th>Procedimento Licitatório</th>
                     <th>Unidade Orç</th>
-                   <!--  <th>Função</th>
-                    <th>Subfunção</th> -->
+                    <th>Função</th>
+                    <th>Subfunção</th>
                     <th>Natureza</th>
-                    <!-- <th>Fonte</th> -->
+                    <th>Fonte</th>
                     <th>Valor</th>
                 </tr>
             </thead>
@@ -30,13 +30,13 @@ if(count($arrayResultado)){
                     <td><?= $linha->EMPENHO ?></td>
                     <td><?= date('d/m/Y', strtotime(substr($linha->DATA_EMPENHO, 0,10))) ?></td>
                     <td><?= utf8_encode($linha->FAVORECIDO); ?></td>
-                   <!--  <td><?= utf8_encode(ibase_blob_echo($linha->HISTORICO)) ?></td>
-                    <td><?= utf8_encode($linha->PROCED_LIC) ?></td> -->
+                    <td><?= utf8_encode(ibase_blob_echo($linha->HISTORICO)) ?></td>
+                    <td><?= utf8_encode($linha->PROCED_LIC) ?></td>
                     <td><?= utf8_encode($linha->UNIDADE_ORC) ?></td>
-                    <!-- <td><?= utf8_encode($linha->FUNCAO) ?></td>
-                    <td><?= utf8_encode($linha->SUBFUNCAO) ?></td> -->
+                    <td><?= utf8_encode($linha->FUNCAO) ?></td>
+                    <td><?= utf8_encode($linha->SUBFUNCAO) ?></td>
                     <td><?= utf8_encode($linha->NATUREZA) ?></td>
-                    <!-- <td><?= utf8_encode($linha->FONTE) ?></td> -->
+                    <td><?= utf8_encode($linha->FONTE) ?></td>
                     <td class="right aligned"><?= number_format($linha->VALOR, 2, ',', '.') ?></td>
                 </tr>
             <?php } ?>

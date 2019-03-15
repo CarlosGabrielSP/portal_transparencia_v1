@@ -59,7 +59,6 @@ if($elemento){
 			$local_temp			= $_FILES['arquivo']['tmp_name'];
 			$uploadArquivo		= move_uploaded_file($local_temp, $caminho_completo);
 			//$array['arquivo']	= $uploadArquivo ? $caminho_completo : "";
-			// var_dump($uploadArquivo);
 			$contrato = new Contrato();
 			$contrato->setAll($array);
 			$contratoDAO = new ContratoDAO();
@@ -79,7 +78,6 @@ if($elemento){
 			$local_temp			= $_FILES['arquivo']['tmp_name'];
 			$uploadArquivo		= move_uploaded_file($local_temp, $caminho_completo);
 			//$array['arquivo']	= $uploadArquivo ? $caminho_completo : "";
-			// var_dump($caminho_completo);
 			$convenio = new Convenio();
 			$convenio->setAll($array);
 			$convenioDAO = new ConvenioDAO();
