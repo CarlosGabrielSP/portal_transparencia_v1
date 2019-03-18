@@ -1,0 +1,18 @@
+{
+    "name": "carlosgabriel/portal-transparencia",
+    "description": "Portal de Transparencia Municipal",
+    "authors": [
+        {
+            "name": "Carlos Gabriel S. Pereira",
+            "email": "carlosgabriel.sp@live.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "CarlosGabriel\\" : "src/"
+        }
+    }
+}
